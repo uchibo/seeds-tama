@@ -1,0 +1,31 @@
+{
+  "name": "seeds-tama",
+  "version": "1.0.0",
+  "description": "",
+  "scripts": {
+    "dev": "npm run init & webpack & eleventy --serve",
+    "build": "npm run init & webpack & eleventy",
+    "copy-imgs": "npx cpx \"src/{images,js,cms}/**/*\" dist/",
+    "copy-pdf": "npx cpx \"src/**/*.pdf\" dist/",
+    "copy-doc": "npx cpx \"src/**/*.doc\" dist/",
+    "init": "rimraf dist/* & npm run copy-imgs & npm run copy-pdf & npm run copy-doc & sass src/assets/css/:dist/assets/css/ --no-source-map --style=compressed",
+    "watch:sass": "sass src/assets/css/:dist/assets/css/ --no-source-map --style=compressed --watch",
+    "start": "webpack-dev-server",
+    "webpack": "webpack --mode development"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "@11ty/eleventy": "^0.12.1",
+    "cpx": "^1.5.0",
+    "rimraf": "^3.0.2",
+    "sass": "^1.39.0",
+    "webpack": "^5.58.0",
+    "webpack-cli": "^4.9.0",
+    "webpack-dev-server": "^4.3.1"
+  },
+  "dependencies": {
+    "smooth-scroll": "^16.1.3"
+  }
+}

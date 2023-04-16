@@ -1,0 +1,44 @@
+ul.bl_btns {
+  padding: 0;
+  gap: 30px;
+  li {
+    list-style-type: none;
+    margin: 0;
+  }
+}
+.el_btn {
+  display: flex;
+  justify-content: center;
+  text-decoration: none;
+  color: #fff;
+  font-size: 1.5rem;
+  font-weight: bold;
+  letter-spacing: 2px;
+  border-radius: 50px;
+  background: rgb(0,146,69);
+  background: linear-gradient(90deg, rgba(0,146,69,1) 0%, rgba(29,164,72,1) 60%, rgba(57,181,74,1) 100%);
+  min-height: 100px;
+  align-items: center;
+  position: relative;
+  &::before, &::after {
+    content: none !important;
+  }
+
+  &__rightArrow {
+    &::after {
+      content: "" !important;
+      display: block;
+      width: 7px;
+      height: 7px;
+      right: 35px;
+      border-top: 2px solid #fff;
+      border-right: 2px solid #fff;
+      transform: rotateZ(45deg);
+      position: absolute;
+    }
+  }
+
+  &_iconRight {
+    margin: 2px 0 0 15px;
+  }
+}

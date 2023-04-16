@@ -1,0 +1,76 @@
+@charset "UTF-8";
+
+@use "global" as g;
+
+@import url('https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@400;500;700&family=Noto+Serif+JP:wght@400;600&display=swap');
+
+* {
+  box-sizing: border-box;
+  color: g.$textColor;
+}
+
+body {
+  margin: 0;
+  font-family: 'Noto Serif JP', serif;
+}
+
+article {
+  margin: 0 auto;
+  padding: 0 20px;
+  background-image: url(../images/bg.png);
+  background-repeat: no-repeat;
+  background-position: center;
+  background-attachment: fixed;
+  min-height: 100%;
+  background-size: cover;
+
+  @include g.mq(lg) {
+    background-size: contain;
+  }
+}
+
+section {
+  &:first-of-type {
+    margin-top: 70px;
+  }
+  &:last-child {
+    padding-bottom: 120px;
+  }
+}
+
+p {
+  line-height: 2;
+  margin-top: 0;
+  margin-bottom: 0;
+  text-align:justify;
+  text-justify:inter-ideograph;
+  &:first-of-type {
+    margin-top: 0;
+  }
+}
+
+a {
+  transition: all .3s;
+  text-decoration: none;
+  &:hover {
+    opacity: .8;
+  }
+}
+
+img {
+  max-width: 100%;
+}
+
+
+.ly_content {
+  // width: g.$contentWidth;
+  margin: 0 auto;
+
+}
+
+.ly_page {
+  max-width: 800px;
+  margin: 0 auto;
+  padding-top: 150px;
+  padding-bottom: 200px;
+}

@@ -1,0 +1,9 @@
+a[href$='.pdf'] {
+  &::before {
+    content: url(../images/icons/pdf.svg);
+    display: inline-block;
+    width: 25px;
+    margin-right: 5px;
+    vertical-align: middle;
+  }
+}

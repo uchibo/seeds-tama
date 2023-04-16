@@ -1,0 +1,19 @@
+.ly_col2 {
+  display: grid;
+  grid-template-columns: auto auto;
+  gap: 16px;
+  
+  &__vertical {
+    grid-template-rows: repeat(9, 1fr);
+    gap: 16px;
+    grid-auto-flow: column;
+  }
+}
+.ly_col5 {
+  display: grid;
+  grid-template-columns: auto auto auto auto auto;
+}
+
+.hp_gap30 {
+  gap: 30px;
+}

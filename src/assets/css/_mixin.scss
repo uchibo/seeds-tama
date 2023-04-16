@@ -1,0 +1,27 @@
+@use "variables" as var;
+
+@mixin mq($bp: "md") {
+  @if $bp == "xs" {
+    @content;
+  } @else {
+    @media screen and (min-width: map-get(var.$breakpoints, $bp)) {
+      @content;
+    }
+  }
+}
+
+@mixin mq-only($bp: "md") {
+  @if $bp == "xs" {
+    @media screen and (max-width: map-get(var.$breakpoints-max, $bp)) {
+      @content;
+    }
+  } @else if $bp == "xxl" {
+    @media screen and (min-width: map-get(var.$breakpoints, $bp)) {
+      @content;
+    }
+  } @else {
+    @media screen and (min-width: map-get(var.$breakpoints, $bp)) and (max-width: map-get(var.$breakpoints-max, $bp)) {
+      @content;
+    }
+  }
+}

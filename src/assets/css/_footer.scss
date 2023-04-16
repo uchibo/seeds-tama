@@ -1,0 +1,77 @@
+
+@use "global" as g;
+
+.ly_footer {
+  width: 100%;
+  height: 150px;
+  position: fixed;
+  bottom: 0;
+
+  &_inner {
+    height: 100%;
+    
+    .bl_footer {
+      width: 100%;
+      height: 100%;
+      display: grid;
+      grid-template-rows: auto 2em;
+      
+      &_top {
+        background-image: url(../images/footer.png);
+        background-repeat: repeat-x;
+        background-position: top;
+        position: relative;
+
+        img {
+          display: block;
+          position: absolute;
+          right: 15px;
+          bottom: 15px;
+          width: 160px;
+        }
+      }
+
+      &_bottom {
+        background-color: #fff;
+        display: grid;
+        align-items: center;
+        padding: 0 15px;
+
+        .leftNav,
+        .rightNav {
+          display: none;
+        }
+
+        @include g.mq(lg) {
+          grid-template-columns: repeat(3, 33%);
+
+          .leftNav {
+            display: block;
+
+            ul {
+              margin: 0;
+              padding: 0;
+              display: flex;
+              gap: 20px;
+      
+              li {
+                list-style-type: none;
+                margin: 0;
+              }
+            }
+          }
+
+          .rightNav {
+            display: block;
+          }
+        }
+
+    
+        .copyright {
+          text-align: center;
+        }
+      }
+    }
+
+  }
+}

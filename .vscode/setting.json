@@ -1,0 +1,28 @@
+{
+  "liveSassCompile.settings.formats": [
+    {
+      "format": "compressed",
+      "extensionName": ".css"
+    }
+  ],
+  "liveSassCompile.settings.generateMap": false,
+  "liveSassCompile.settings.excludeList": [
+    "**/node_modules/**",
+    ".vscode/**",
+    ".history/**"
+  ],
+  "liveSassCompile.settings.autoprefix": [
+    "last 2 versions",
+    "ie >= 11",
+    "Android >= 6",
+    "ios_saf >= 10"
+  ],
+  "emmet.triggerExpansionOnTab": true,
+  "files.associations": {
+    "*.njk": "html",
+    "*.html": "njk"
+  },
+  "emmet.includeLanguages": {
+    "nunjucks": "html"
+  }
+}

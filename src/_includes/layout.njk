@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>{% if className == 'home' %}{{ meta.siteName }}{% else %}{{ title }} | {{ meta.siteName }}{% endif %}</title>
+  {% if description %}
+  <meta name="description" content="{{ description }}">
+  {% else %}
+  <meta name="description"  content="{{ meta.siteDescription }}" />
+  {% endif %}
+  <link rel="stylesheet" href="{{ path }}assets/css/screen.css">
+<meta name="robots" content="noindex,nofollow,noarchive">
+  <!-- Global site tag (gtag.js) - Google Analytics -->
+
+
+</head>
+<body id="top">
+  <header class="ly_header">
+    <div class="ly_header_inner">
+      <div class="el_logo">
+        <a href="{{ path }}"><img src="{{ path }}assets/images/logo.svg" alt="NPO法人シーズネットワーク"></a>
+      </div>
+      <nav>
+        <ul class="bl_globalNav">
+          <li{% if className == 'home' %} class="current" {% endif %}><a href="{{ path }}">ホーム</a></li>
+          <li{% if className == 'works' %} class="current" {% endif %}><a href="{{ path }}works/">主な事業・活動の実績</a></li>
+          <li{% if className == 'recruit' %} class="current" {% endif %}><a href="{{ path }}recruit/">アクティブメンバー募集！</a></li>
+          <li{% if className == 'seed-letter' %} class="current" {% endif %}><a href="{{ path }}seed-letter/">広報紙「シーズレター」</a></li>
+        </ul>
+        <div id="spNavOpen">
+          <img src="../assets/images/tanpopo1.png" alt="">
+          <p>メニュー</p>
+        </div>
+      </nav>
+    </div>
+  </header>
+  <main>
+    <article>
+      {{ content | safe }}
+    </article>
+  </main>
+  <footer class="ly_footer">
+    <div class="ly_footer_inner">
+      <div class="bl_footer">
+        <div class="bl_footer_top">
+          <img src="{{ path }}assets/images/tanpopo1.png" alt="">
+        </div>
+        <div class="bl_footer_bottom">
+          <nav class="leftNav">
+            <ul>
+              <li><a href="{{ path }}contact/">お問い合わせ</a></li>
+              <li><a href="{{ path }}privacy-policy/">プライバシーポリシー</a></li>
+            </ul>
+          </nav>
+          <small class="copyright">All Rights Reserved.Copyright&copy;.NPO法人シーズネットワーク</small>
+          <div class="rightNav"></div>
+        </div>
+      </div>
+    </div>
+  </footer>
+  <div id="spNav">
+    <div class="bl_spNav">
+      <p class="bl_spNav_ttl">メニュー</p>
+      <nav>
+        <ul>
+          <li{% if className == 'home' %} class="current" {% endif %}><a href="{{ path }}">ホーム</a></li>
+          <li{% if className == 'works' %} class="current" {% endif %}><a href="{{ path }}works/">主な事業・活動の実績</a></li>
+          <li{% if className == 'recruit' %} class="current" {% endif %}><a href="{{ path }}recruit/">アクティブメンバー募集！</a></li>
+          <li{% if className == 'seed-letter' %} class="current" {% endif %}><a href="{{ path }}seed-letter/">広報紙「シーズレター」</a></li>
+        </ul>
+        <div class="bl_sns">
+          <a href="" target="_blank"><img src="{{path}}assets/images/facebook.svg" alt="facebook"></a>
+          <a href="" target="_blank"><img src="{{path}}assets/images/blogger.svg" alt="blogger"></a>
+          <a href="" target="_blank"><img src="{{path}}assets/images/twitter.svg" alt="twitter"></a>
+        </div>
+        <ul>
+          <li><a href="{{ path }}contact/">お問い合わせ</a></li>
+          <li><a href="{{ path }}privacy-policy/">プライバシーポリシー</a></li>
+        </ul>
+      </nav>
+      <img src="../assets/images/tanpopo1.png" alt="" class="un_tanpopo">
+      <div id="spNavClose">閉じる</div>
+    </div>
+  </div>
+  <div id="back-top" class="active">
+    <a href="#top">
+      <img src="{{ path }}assets/images/pagetop.png" alt="">
+    </a>
+  </div>
+  <script src="{{ path }}assets/js/main.js"></script>
+
+  <script>
+    const spNavOpen = document.getElementById('spNavOpen');
+    const spNavClose = document.getElementById('spNavClose');
+    const spNav = document.getElementById('spNav');
+
+    const fadeIn = (elem, dulation) => {
+      elem.style.opacity = 0;
+      elem.style.display = 'block';
+      elem.style.transition = "opacity " + dulation + "ms";      
+      setTimeout(function(){elem.style.opacity = 1;}, 1);
+    }
+
+    const fadeOut = (elem, dulation) => {
+      elem.style.opacity = 1;
+      elem.style.transition = "opacity " + dulation + "ms";      
+      setTimeout(function(){elem.style.opacity = 0;}, 1); // 0.001秒後に transition開始（透過度0にする）
+      setTimeout(function(){elem.style.display = "none";}, dulation + 10);
+    }
+
+    spNavOpen.addEventListener('click', () => {
+      fadeIn(spNav, 300);
+    });
+
+    spNavClose.addEventListener('click', () => {
+      fadeOut(spNav, 300);
+    });
+  </script>
+</body>
+</html>

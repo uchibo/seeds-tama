@@ -1,0 +1,25 @@
+$pageWidth: 1440px;
+$contentWidth_wide: 1040px;
+$contentWidth: 900px;
+
+$baseColor: #3ab54a;
+$textColor: #333333;
+
+$breakPoint: 750px !default;
+$gutter: 15px !default;
+
+$breakpoints: (
+  "sm": 576px,
+  "md": 750px,
+  "lg": 1024px,
+  "xl": 1200px,
+  "xxl": 1400px,
+) !default;
+
+$breakpoints-max: (
+  "xs": map-get($breakpoints, sm)-1,
+  "sm": map-get($breakpoints, md)-1,
+  "md": map-get($breakpoints, lg)-1,
+  "lg": map-get($breakpoints, xl)-1,
+  "xl": map-get($breakpoints, xxl)-1,
+) !default;
