@@ -5,12 +5,49 @@ eleventyComputed:
   path: './'
   className: 'home'
 ---
+<div class="bl_mv">
+  <h1><img src="{{path}}/assets/images/catch.png" alt="子育てを楽しみたい。自分らしく働きたい、暮らしやすい「まち」を創りたい・・・そんなあなたを応援します。"></h1>
+</div>
 <div class="ly_content">
-  <div class="ly_page">
-    <div class="ly_page_inner">
-      <div class="bl_page">
-        <img src="{{path}}/assets/images/dammy.png" alt="">
+  <div class="ly_content_inner">
+    <section>
+      <h2 class="ttl_news mt0">お知らせ</h2>
+      <ul class="bl_newsList">
+        <li>
+          <span class="date">2023.4.1</span>
+          <a href="#">お知らせがここに入ります。お知らせがここに入ります。お知らせがここに入ります。お知らせがここに入ります。お知らせがここに入ります。お知らせがここに入ります。お知らせがここに入ります。</a>
+        </li>
+        <li>
+          <span class="date">2023.4.2</span>
+          <a href="#">記事タイトル</a>
+        </li>
+        <li>
+          <span class="date">2023.4.3</span>
+          <a href="#">記事タイトル</a>
+        </li>
+      </ul>
+
+      {% include 'snsBtn.njk' %}
+    </section>
+
+    <section>
+      <h2><img src="{{path}}/assets/images/ttl1.svg" alt="子育て支援、女性の社会参画支援、まづくり"></h2>
+      <p>働き方の‘多様性’が、当たり前のようにうたわれるようになった昨今。</p>
+      <p>でも、多くの女性が、結婚、出産、子育て、パートナーの転勤、親の介護など、家庭の状況によって、自らの働き方を柔軟に変えてゆく必要に迫られがちだということは、いまだに変わらない現実ではないでしょうか。</p>
+      <p>シーズネットワークは、地域の女性たちが、趣味、特技、就労経験、子育て経験などを活かし、ライフステージに合わせて自分らしく働くことができる機会の創出・提供を行ってきました。「はじめの一歩」を踏み出し「次のステップ」へ進む女性たちを、さまざまな形で応援し続けています。</p>
+    </section>
+
+    <section>
+      <h2><img src="{{path}}/assets/images/ttl2.svg" alt="こんなことやっています"></h2>
+      <div class="bl_works">
+        <img src="{{path}}/assets/images/works1.png" alt="子育て中の女性たちの交流・活動サポート（Beansプロジェクト）" class="bl_works_item bl_works_item_1">
+        <img src="{{path}}/assets/images/works2.png" alt="防災啓発イベント・講座等の企画運営（ABo）" class="bl_works_item bl_works_item_2">
+        <img src="{{path}}/assets/images/works3.png" alt="資格や経験、スキルを活かして働くきっかけづくり。親子向け、女性向けイベント講座等の企画運営" class="bl_works_item bl_works_item_3">
+        <img src="{{path}}/assets/images/works4.png" alt="子育て支援施設の運営" class="bl_works_item bl_works_item_4">
+        <img src="{{path}}/assets/images/works5.png" alt="講座、会議、イベント等に伴う一時保育" class="bl_works_item bl_works_item_5">
       </div>
-    </div>
+    </section>
   </div>
+
+  {% include 'bnrs.njk' %}
 </div>

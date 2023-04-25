@@ -1,0 +1,36 @@
+@use "variables" as v;
+
+.bl_centerBtn {
+  text-align: center;
+  margin: 30px auto;
+}
+
+.bl_newsList {
+  margin: 30px auto 40px;
+  padding: 0;
+
+  li {
+    list-style-type: none;
+  }
+  span {
+    display: block;
+  }
+  a {
+    color: v.$baseColor;
+    text-decoration: underline;
+    line-height: 2;
+  }
+}
+
+.bl_sns {
+  display: flex;
+  justify-content: center;
+  gap: 15px;
+}
+
+.bl_bnr {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 10px;
+}

@@ -2,22 +2,39 @@
 @use "global" as g;
 
 .ly_header {
-  height: 100px;
   position: fixed;
   width: 100%;
   top: 0;
+  z-index: 10;
 
   &_inner {
     display: flex;
     justify-content: space-between;
     box-sizing: border-box;
-    padding: 15px 30px;
     background: linear-gradient(to bottom, rgb(255, 255, 255) 20%, rgba(255, 255, 255, 0.6) 80%, rgba(255, 255, 255, 0) 100%);
+    padding: 10px 15px;
   }
+
+  @include g.mq() {
+    &_inner {
+      padding: 15px 30px;
+
+      nav {
+        display: flex;
+        align-items: end;
+        padding-bottom: 2px;
+      }
+    }
+  }
+
 }
 
 .el_logo {
-  width: 183px;
+  width: 150px;
+
+  @include g.mq() {
+    width: 183px;
+  }
 }
 
 .bl_globalNav {
@@ -26,6 +43,7 @@
   @include g.mq(lg) {
     display: flex;
     gap: 50px;
+    margin: 0;
     
     li {
       list-style-type: none;
@@ -38,12 +56,14 @@
   display: grid;
   justify-content: center;
   img {
-    width: 60px;
+    width: 45px;
   }
 
   p {
     font-size: .75rem;
     text-align: center;
+    margin: 0;
+    line-height: 1;
   }
 
   @include g.mq(lg) {
@@ -61,6 +81,7 @@
   top: 0;
   left: 0;
   background-color: #fff;
+  z-index: 20;
 
   .bl_spNav {
     position: relative;

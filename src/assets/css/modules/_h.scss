@@ -1,1 +1,40 @@
 @use "../global" as g;
+
+h1 {
+  font-family: Noto Serif JP;
+  font-size: 24px;
+  font-weight: 400;
+  line-height: 28px;
+  text-align: center;
+  margin-bottom: 90px;
+
+  @include g.mq() {
+    font-size: 32px;
+  }
+}
+
+h2 {
+  font-family: Noto Serif JP;
+  font-size: 20px;
+  font-weight: 700;
+  line-height: 28px;
+  letter-spacing: 2px;
+  color: g.$baseColor;
+  text-align: center;
+
+  @include g.mq() {
+    font-size: 26px;
+  }
+}
+
+h3 {
+  font-family: Noto Serif JP;
+  font-size: 14px;
+  font-weight: 700;
+  line-height: 21px;
+  text-align: center;
+  
+  @include g.mq() {
+    font-size: 18px;
+  }
+}

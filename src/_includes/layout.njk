@@ -15,7 +15,7 @@
 
 
 </head>
-<body id="top">
+<body id="top" class="{{className}}">
   <header class="ly_header">
     <div class="ly_header_inner">
       <div class="el_logo">
@@ -26,7 +26,7 @@
           <li{% if className == 'home' %} class="current" {% endif %}><a href="{{ path }}">ホーム</a></li>
           <li{% if className == 'works' %} class="current" {% endif %}><a href="{{ path }}works/">主な事業・活動の実績</a></li>
           <li{% if className == 'recruit' %} class="current" {% endif %}><a href="{{ path }}recruit/">アクティブメンバー募集！</a></li>
-          <li{% if className == 'seed-letter' %} class="current" {% endif %}><a href="{{ path }}seed-letter/">広報紙「シーズレター」</a></li>
+          <li{% if className == 'seeds-letter' %} class="current" {% endif %}><a href="{{ path }}seeds-letter/">広報紙「シーズレター」</a></li>
         </ul>
         <div id="spNavOpen">
           <img src="../assets/images/tanpopo1.png" alt="">
@@ -59,6 +59,7 @@
       </div>
     </div>
   </footer>
+
   <div id="spNav">
     <div class="bl_spNav">
       <p class="bl_spNav_ttl">メニュー</p>
@@ -69,11 +70,7 @@
           <li{% if className == 'recruit' %} class="current" {% endif %}><a href="{{ path }}recruit/">アクティブメンバー募集！</a></li>
           <li{% if className == 'seed-letter' %} class="current" {% endif %}><a href="{{ path }}seed-letter/">広報紙「シーズレター」</a></li>
         </ul>
-        <div class="bl_sns">
-          <a href="" target="_blank"><img src="{{path}}assets/images/facebook.svg" alt="facebook"></a>
-          <a href="" target="_blank"><img src="{{path}}assets/images/blogger.svg" alt="blogger"></a>
-          <a href="" target="_blank"><img src="{{path}}assets/images/twitter.svg" alt="twitter"></a>
-        </div>
+        {% include 'snsBtn.njk' %}
         <ul>
           <li><a href="{{ path }}contact/">お問い合わせ</a></li>
           <li><a href="{{ path }}privacy-policy/">プライバシーポリシー</a></li>
@@ -83,6 +80,7 @@
       <div id="spNavClose">閉じる</div>
     </div>
   </div>
+  
   <div id="back-top" class="active">
     <a href="#top">
       <img src="{{ path }}assets/images/pagetop.png" alt="">

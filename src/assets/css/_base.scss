@@ -15,8 +15,6 @@ body {
 }
 
 article {
-  margin: 0 auto;
-  padding: 0 20px;
   background-image: url(../images/bg.png);
   background-repeat: no-repeat;
   background-position: center;
@@ -30,18 +28,20 @@ article {
 }
 
 section {
+  margin: 50px auto;
+
   &:first-of-type {
-    margin-top: 70px;
+    margin-top: 0;
   }
-  &:last-child {
-    padding-bottom: 120px;
+
+  @include g.mq() {
+    margin: 100px auto;
   }
 }
 
 p {
   line-height: 2;
-  margin-top: 0;
-  margin-bottom: 0;
+  margin: 1em auto;
   text-align:justify;
   text-justify:inter-ideograph;
   &:first-of-type {
@@ -61,11 +61,30 @@ img {
   max-width: 100%;
 }
 
+article {
+  ul {
+    li {
+      list-style-type: none;
+      text-indent: -1em;
+      padding-left: 1em;
+  
+      &::before {
+        content: '◆';
+        color: g.$baseColor;
+      }
+    }
+  }
+}
 
 .ly_content {
-  // width: g.$contentWidth;
-  margin: 0 auto;
+  max-width: 840px;
+  margin: 160px auto;
+  padding: 0 20px;
+  box-sizing: border-box;
+}
 
+.home .ly_content {
+  margin-top: 0;
 }
 
 .ly_page {
