@@ -12,6 +12,7 @@
     "watch:sass": "sass src/assets/css/:dist/assets/css/ --no-source-map --style=compressed --watch",
     "start": "webpack-dev-server",
     "format": "prettier --write src",
+    "format-dist-html": "prettier --write dist/**/*.html",
     "webpack": "webpack --mode development"
   },
   "keywords": [],
