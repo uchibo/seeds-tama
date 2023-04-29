@@ -1,0 +1,12 @@
+@use '../global' as g;
+
+.seedsLetter {
+  .blogBnr {
+    margin: 30px auto 60px;
+    
+    @include g.mq() {
+      margin: 60px auto;
+    }
+  }
+}
+// .seedsLetter

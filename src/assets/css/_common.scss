@@ -1,16 +1,25 @@
+@use "mixin" as m;
 @use "variables" as v;
 
+// 中央寄せボタン
 .bl_centerBtn {
   text-align: center;
   margin: 30px auto;
 }
 
+// お知らせ一覧
 .bl_newsList {
   margin: 30px auto 40px;
   padding: 0;
 
   li {
     list-style-type: none;
+    text-indent: 0;
+    padding-left: 0;
+
+    &::before {
+      content: none;
+    }
   }
   span {
     display: block;
@@ -22,15 +31,36 @@
   }
 }
 
+// 注釈
+.bl_note {
+  margin: 30px auto;
+  
+  li {
+    font-size: .75rem;
+    text-indent: -1em;
+    padding-left: 1em;
+    &::before {
+      content: none;
+    }
+    @include m.mq() {
+      font-size: .875rem;
+    }
+  }
+
+}
+
+// SNSボタン
 .bl_sns {
   display: flex;
   justify-content: center;
   gap: 15px;
 }
 
+// バナー
 .bl_bnr {
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
   gap: 10px;
+  text-align: center;
 }

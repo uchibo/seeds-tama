@@ -1,6 +1,10 @@
 @use '../global' as g;
 
 .home {
+  .ly_content {
+    padding-top: 0;
+  }
+
   .ttl_news {
     font-size: 1.5rem;
     color: #333;

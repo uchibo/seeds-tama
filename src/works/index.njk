@@ -6,7 +6,9 @@ className: 'works'
 ---
 <div class="ly_content">
   <div class="ly_content_inner">
-    <h1>主な事業・活動の実績</h1>
+    <div class="center">
+      <h1>主な事業・活動の実績</h1>
+    </div>
     <section>
       <h2>受託事業</h2>
       <ul>
@@ -28,7 +30,7 @@ className: 'works'
     </section>
     <section>
       <h2>自主事業</h2>
-      <h3>＜赤ちゃんや幼児がいる家庭の防災啓発プロジェクトABo＞</h3>
+      <h3>＜赤ちゃんや幼児がいる家庭の<br class="spOnly" />防災啓発プロジェクトABo＞</h3>
       <ul>
         <li>親子で防災プログラム「あそんで防災」（ココリア多摩センター）</li>
         <li>
@@ -42,7 +44,9 @@ className: 'works'
         <li>ゲームで楽しく防災体験（ガーデンシティ多摩センターこどもまつり）</li>
         <li>定例会（月1回程度）</li>
       </ul>
+    </section>
 
+    <section>
       <h3>＜シーズサロン＞</h3>
       <ul>
         <li>ちょっと未来のなりたい自分に出逢うアートワーク</li>
@@ -50,7 +54,9 @@ className: 'works'
         <li>おもちゃコンサルタントマスターによるおもちゃトーク</li>
         <li>かわいいクリスマスリースを作ろう！</li>
       </ul>
+    </section>
 
+    <section>
       <h3>＜Beansプロジェクト＞</h3>
       <ul>
         <li>
@@ -63,9 +69,12 @@ className: 'works'
         </li>
         <li>定例会（年数回）</li>
       </ul>
-
-      <img src="{{path}}assets/images/parts.png" alt="こんなのもやってました！多摩センター子育てファミリーステーションcoucou（2003年～2011年）。Seedsひろば（2002年～2014年）">
+      <img src="{{path}}assets/images/parts.png" alt="こんなのもやってました！多摩センター子育てファミリーステーションcoucou（2003年～2011年）。Seedsひろば（2002年～2014年）" class="img1">
     </section>
+
+    {% include 'bnrs.njk' %}
+
   </div>
+  <!-- /.ly_content_inner -->
 </div>
 <!-- /.ly_content -->

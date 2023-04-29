@@ -1,10 +1,10 @@
-@use "variables" as var;
+@use "variables" as v;
 
 @mixin mq($bp: "md") {
   @if $bp == "xs" {
     @content;
   } @else {
-    @media screen and (min-width: map-get(var.$breakpoints, $bp)) {
+    @media screen and (min-width: map-get(v.$breakpoints, $bp)) {
       @content;
     }
   }
@@ -12,16 +12,45 @@
 
 @mixin mq-only($bp: "md") {
   @if $bp == "xs" {
-    @media screen and (max-width: map-get(var.$breakpoints-max, $bp)) {
+    @media screen and (max-width: map-get(v.$breakpoints-max, $bp)) {
       @content;
     }
   } @else if $bp == "xxl" {
-    @media screen and (min-width: map-get(var.$breakpoints, $bp)) {
+    @media screen and (min-width: map-get(v.$breakpoints, $bp)) {
       @content;
     }
   } @else {
-    @media screen and (min-width: map-get(var.$breakpoints, $bp)) and (max-width: map-get(var.$breakpoints-max, $bp)) {
+    @media screen and (min-width: map-get(v.$breakpoints, $bp)) and (max-width: map-get(v.$breakpoints-max, $bp)) {
       @content;
     }
+  }
+}
+
+@mixin link-effect($baseColor) {
+  color: currentcolor;
+  transition: color .4s, background-size 0.4s cubic-bezier(0.215, 0.61, 0.355, 1);
+  background: linear-gradient(#{$baseColor}, #{$baseColor}) right bottom/0 2px no-repeat;
+
+  &:hover {
+    color: #{$baseColor};
+    background-position: left bottom;
+    background-size: 100% 2px;
+  }
+}
+
+@mixin h2() {
+  font-family: Noto Serif JP;
+  font-size: 20px;
+  font-weight: 700;
+  line-height: 28px;
+  letter-spacing: 2px;
+  color: v.$baseColor;
+  text-align: center;
+  margin-bottom: 15px;
+  
+  
+  @include mq() {
+    font-size: 26px;
+    margin-bottom: 30px;
   }
 }

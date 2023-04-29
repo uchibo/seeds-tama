@@ -49,6 +49,10 @@
       list-style-type: none;
       margin: 0;
     }
+
+    a {
+      @include g.link-effect(g.$baseColor);
+    }
   }
 }
 
@@ -90,19 +94,25 @@
     justify-content: center;
     align-items: center;
     height: 100%;
+    background-image: url(../images/bg_spnav.png);
+    background-repeat: no-repeat;
+    background-position: center 39%;
+    background-size: 320px;
+
 
     &_ttl {
       font-size: 1.5rem;
       position: relative;
+      margin-bottom: 0;
 
       &::after {
         content: '';
         position: absolute;
-        top: -50px;
-        right: -70px;
+        top: -54px;
+        right: -50px;
         display: block;
-        width: 110px;
-        height: 100px;
+        width: 90px;
+        height: 90px;
         background-image: url(../images/tanpopo2.png);
         background-size: contain;
         background-repeat: no-repeat;
@@ -133,13 +143,11 @@
     }
 
 
-  }
-
-
-}
+  } // .bl_spNav
+} // #spNav
 
 #spNavClose {
   position: absolute;
-  top: 35px;
-  right: 35px;
+  top: 20px;
+  right: 20px;
 }

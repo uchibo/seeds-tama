@@ -6,10 +6,18 @@ eleventyComputed:
 ---
 <div class="ly_content">
   <div class="ly_content_inner">
-    <h1>広報紙「シーズレター」</h1>
+    <div class="center">
+      <h1>広報紙「シーズレター」</h1>
+    </div>
     <p>シーズネットワークでは、広報紙『シーズレター』を年４回、発行しています。身近で見つけた魅力的な女性たちへのインタビュー記事「働き方 私流」、テーマを設けてアクティブメンバーや一般の方からお寄せいただいたコメントを掲載する特集記事の他、活動の報告、イベントのお知らせなどが満載されています。多摩市内公共施設（公民館など）に置いてありますので、お立ち寄りになる機会があれば手に取ってみてくださいね。郵送ご希望の方は<a href="{{path}}/cpmtact/">メール</a>でご連絡ください。無料でお送りします（継続的に購読いただく場合には‘お知らせメンバー’への登録が必要です）</p>
-    <img src="{{path}}assets/images/seeds_letter.jpg" alt="シーズレター表紙画像">
-    <div class="bl_centerBtn"><a href="https://seeds-letter.blogspot.com/" target="_blank"><img src="{{path}}assets/images/btn_blog.png" alt="広報紙シーズレター『働き方 私流』"></a></div>
+    <div class="center mt40"><img src="{{path}}assets/images/seeds_letter.jpg" alt="シーズレター表紙画像" class="w400"></div>
+    <div class="center blogBnr">
+      <a href="https://seeds-letter.blogspot.com/" target="_blank"><img src="{{path}}assets/images/btn_blog.png" alt="広報紙シーズレター『働き方 私流』" class="w300"></a>
+    </div>
+
+    {% include 'bnrs.njk' %}
+
   </div>
+  <!-- /.ly_content_inner -->
 </div>
 <!-- /.ly_content -->

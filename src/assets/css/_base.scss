@@ -24,11 +24,12 @@ article {
 
   @include g.mq(lg) {
     background-size: contain;
+    min-height: calc(100vh - 320px);
   }
 }
 
 section {
-  margin: 50px auto;
+  margin: 60px auto;
 
   &:first-of-type {
     margin-top: 0;
@@ -44,8 +45,14 @@ p {
   margin: 1em auto;
   text-align:justify;
   text-justify:inter-ideograph;
+  font-size: .875rem;
+
   &:first-of-type {
     margin-top: 0;
+  }
+
+  @include g.mq() {
+    font-size: 1rem;
   }
 }
 
@@ -61,31 +68,141 @@ img {
   max-width: 100%;
 }
 
+ul {
+  padding: 0;
+}
+
+ol {
+  padding-left: 1.3em;
+}
+
 article {
   ul {
     li {
       list-style-type: none;
       text-indent: -1em;
       padding-left: 1em;
+      font-size: .875rem;
+      line-height: 1.5;
+      text-align:justify;
+      text-justify:inter-ideograph;
   
       &::before {
         content: '◆';
         color: g.$baseColor;
       }
+
+      @include g.mq() {
+        font-size: 1rem;
+      }
+    }
+  }
+
+
+  ol {
+    counter-reset: my-counter;
+    list-style: none;
+    padding: 0;
+    margin: 0;
+
+    li {
+      padding-left: 20px;
+      position: relative;
+      font-size: .875rem;
+
+      &:before {
+        content: counter(my-counter);
+        counter-increment: my-counter;
+        border: 1px solid;
+        border-radius: 50%;
+        box-sizing: border-box;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        height: 1rem;
+        width: 1rem;
+        font-size: 85%;
+        line-height: 1;
+        position: absolute;
+        top: 4px;
+        left: 0;
+      }
+
+      @include g.mq() {
+        font-size: 1rem;
+      }
+    }
+  }
+
+  ol.bl_no {
+    counter-reset: my-counter;
+    list-style: none;
+    padding: 0;
+    margin: 0;
+
+    & > li {
+      font-size: .875rem;
+      line-height: 2;
+      margin-top: 20px;
+      padding-left: 0;
+      
+      @include g.mq() {
+        margin-top: 60px;
+        padding-left: 110px;
+        font-size: 1rem;
+      }
+
+      &:first-child {
+        margin-top: 0;
+      }
+
+      &:before {
+        content: counter(my-counter);
+        counter-increment: my-counter;
+        border: none;
+        font-size: 2.062rem;
+        font-weight: bold;
+        line-height: 1;
+        color: g.$baseColor;
+
+        background-image: url('../../assets/images/tanpopo3.png') !important;
+        background-size: contain !important;
+        background: no-repeat;
+        width: 90px;
+        height: 82px;
+        position: static;
+        margin: 0 auto;
+
+        @include g.mq() {
+          position: absolute;
+          top: -10px;
+        }
+      }
+    }
+  }
+} // article
+
+.ly_content {
+  max-width: 840px;
+  margin: 0 auto;
+  box-sizing: border-box;
+  padding: 70px 0 120px;
+
+  &_inner {
+    padding: 0 15px;
+  }
+  
+ 
+  @include g.mq() {
+    padding: 160px 0;
+
+    &_inner {
+      padding: 0 30px;
     }
   }
 }
 
-.ly_content {
-  max-width: 840px;
-  margin: 160px auto;
-  padding: 0 20px;
-  box-sizing: border-box;
-}
 
-.home .ly_content {
-  margin-top: 0;
-}
 
 .ly_page {
   max-width: 800px;
