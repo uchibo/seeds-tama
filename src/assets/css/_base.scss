@@ -2,7 +2,7 @@
 
 @use "global" as g;
 
-@import url('https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@400;500;700&family=Noto+Serif+JP:wght@400;600&display=swap');
+@import url("https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@400;500;700&family=Noto+Serif+JP:wght@400;600&display=swap");
 
 * {
   box-sizing: border-box;
@@ -11,7 +11,7 @@
 
 body {
   margin: 0;
-  font-family: 'Noto Serif JP', serif;
+  font-family: "Noto Serif JP", serif;
 }
 
 article {
@@ -43,9 +43,9 @@ section {
 p {
   line-height: 2;
   margin: 1em auto;
-  text-align:justify;
-  text-justify:inter-ideograph;
-  font-size: .875rem;
+  text-align: justify;
+  text-justify: inter-ideograph;
+  font-size: 0.875rem;
 
   &:first-of-type {
     margin-top: 0;
@@ -57,10 +57,10 @@ p {
 }
 
 a {
-  transition: all .3s;
+  transition: all 0.3s;
   text-decoration: none;
   &:hover {
-    opacity: .8;
+    opacity: 0.8;
   }
 }
 
@@ -82,13 +82,13 @@ article {
       list-style-type: none;
       text-indent: -1em;
       padding-left: 1em;
-      font-size: .875rem;
+      font-size: 0.875rem;
       line-height: 1.5;
-      text-align:justify;
-      text-justify:inter-ideograph;
-  
+      text-align: justify;
+      text-justify: inter-ideograph;
+
       &::before {
-        content: '◆';
+        content: "◆";
         color: g.$baseColor;
       }
 
@@ -97,7 +97,6 @@ article {
       }
     }
   }
-
 
   ol {
     counter-reset: my-counter;
@@ -108,7 +107,7 @@ article {
     li {
       padding-left: 20px;
       position: relative;
-      font-size: .875rem;
+      font-size: 0.875rem;
 
       &:before {
         content: counter(my-counter);
@@ -141,11 +140,11 @@ article {
     margin: 0;
 
     & > li {
-      font-size: .875rem;
+      font-size: 0.875rem;
       line-height: 2;
       margin-top: 20px;
       padding-left: 0;
-      
+
       @include g.mq() {
         margin-top: 60px;
         padding-left: 110px;
@@ -165,7 +164,7 @@ article {
         line-height: 1;
         color: g.$baseColor;
 
-        background-image: url('../../assets/images/tanpopo3.png') !important;
+        background-image: url("../../assets/images/tanpopo3.png") !important;
         background-size: contain !important;
         background: no-repeat;
         width: 90px;
@@ -191,8 +190,7 @@ article {
   &_inner {
     padding: 0 15px;
   }
-  
- 
+
   @include g.mq() {
     padding: 160px 0;
 
@@ -201,8 +199,6 @@ article {
     }
   }
 }
-
-
 
 .ly_page {
   max-width: 800px;

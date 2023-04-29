@@ -1,4 +1,4 @@
-@use '../global' as g;
+@use "../global" as g;
 
 .home {
   .ly_content {
@@ -20,22 +20,21 @@
       max-width: 414px;
 
       &_1 {
-
-      } 
+      }
       &_2 {
         margin-top: -30px;
-      } 
+      }
       &_3 {
-        margin: clamp(1.25rem, 0.054rem + 5.102vw, 2.5rem) auto clamp(2.5rem, 0.108rem + 10.204vw, 5rem); // 20-40, auto, 40-80
-      } 
+        margin: clamp(1.25rem, 0.054rem + 5.102vw, 2.5rem) auto
+          clamp(2.5rem, 0.108rem + 10.204vw, 5rem); // 20-40, auto, 40-80
+      }
       &_4 {
-
-      } 
+      }
       &_5 {
         margin-top: -40px;
-      } 
+      }
     }
-    
+
     @include g.mq() {
       height: 820px;
 
@@ -46,27 +45,27 @@
           top: 0;
           left: 0;
           width: 308px;
-        } 
+        }
         &_2 {
           top: 100px;
           right: 0;
           width: 281px;
-        } 
+        }
         &_3 {
           top: 250px;
           left: calc(154 / 800 * 100%);
           width: 345px;
-        } 
+        }
         &_4 {
           top: 580px;
           left: 112px;
           width: 230px;
-        } 
+        }
         &_5 {
           top: 525px;
           left: 456px;
           width: 282px;
-        } 
+        }
       }
     } // mq
   }

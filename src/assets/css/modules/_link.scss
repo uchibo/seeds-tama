@@ -1,4 +1,4 @@
-a[href$='.pdf'] {
+a[href$=".pdf"] {
   &::before {
     content: url(../images/icons/pdf.svg);
     display: inline-block;

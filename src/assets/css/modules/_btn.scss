@@ -1,4 +1,4 @@
-@use '../global' as g;
+@use "../global" as g;
 
 .el_btn {
   display: inline-flex;
@@ -13,8 +13,8 @@
   border: 2px solid g.$baseColor;
   min-height: 50px;
   align-items: center;
-  
+
   &:hover {
-    background-color: rgba(g.$baseColor, .05);
+    background-color: rgba(g.$baseColor, 0.05);
   }
 }

@@ -1,7 +1,6 @@
-@use '../global' as g;
+@use "../global" as g;
 
 .privacyPolicy {
-  
   .body {
     h2 {
       font-size: 20px;
@@ -10,16 +9,16 @@
     }
 
     h3 {
-      font-size: .875rem;
+      font-size: 0.875rem;
       text-align: left;
-      margin-bottom: .25em;
-      
+      margin-bottom: 0.25em;
+
       & ~ p {
         margin-top: 0;
         margin-bottom: 1.5em;
       }
-      
-      @include g.mq(){
+
+      @include g.mq() {
         font-size: 1rem;
       }
     }

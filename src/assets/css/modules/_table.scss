@@ -21,7 +21,8 @@ th {
     border-right: none;
   }
 }
-th, td {
+th,
+td {
   padding: 7px 28px;
   position: relative;
   font-weight: 500;
@@ -50,14 +51,15 @@ td {
       list-style-type: none;
       margin: 0;
       &::before {
-        content: '●';
+        content: "●";
         color: #009245;
         margin-right: 3px;
       }
     }
   }
 }
-tr:first-child > td, tr:nth-child(2) > td {
+tr:first-child > td,
+tr:nth-child(2) > td {
   border-top: none;
 }
 
@@ -76,18 +78,20 @@ tr:first-child > td, tr:nth-child(2) > td {
 .el_tbl__type2 {
   margin-top: 70px;
   tr:first-child {
-    th,td {
+    th,
+    td {
       border-top: none;
     }
   }
-  th,td {
+  th,
+  td {
     border-top: 1px dashed #bfc1cd;
     &::after {
       content: none;
     }
   }
   td {
-    &:nth-last-child(-n+2) {
+    &:nth-last-child(-n + 2) {
       border-top: none;
     }
   }

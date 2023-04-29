@@ -1,4 +1,4 @@
-@use '../global' as g;
+@use "../global" as g;
 
 .news {
   article {
@@ -10,9 +10,9 @@
     .el_btn {
       min-height: 30px;
       padding: 0 45px;
-      font-size: .875rem;
-      
-      @include g.mq{
+      font-size: 0.875rem;
+
+      @include g.mq {
         min-height: 44px;
         min-width: 200px;
       }
@@ -31,21 +31,20 @@
       font-size: 24px;
       font-weight: normal;
 
-      @include g.mq{
+      @include g.mq {
         font-size: 34px;
         margin: 80px 0 40px;
       }
     }
-    
+
     h2 {
       text-align: left;
       font-weight: normal;
 
-      @include g.mq{
+      @include g.mq {
         font-style: 26px;
         margin: 60px 0 20px;
       }
-
     }
 
     p {

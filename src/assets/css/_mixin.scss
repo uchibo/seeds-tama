@@ -28,8 +28,10 @@
 
 @mixin link-effect($baseColor) {
   color: currentcolor;
-  transition: color .4s, background-size 0.4s cubic-bezier(0.215, 0.61, 0.355, 1);
-  background: linear-gradient(#{$baseColor}, #{$baseColor}) right bottom/0 2px no-repeat;
+  transition: color 0.4s,
+    background-size 0.4s cubic-bezier(0.215, 0.61, 0.355, 1);
+  background: linear-gradient(#{$baseColor}, #{$baseColor}) right bottom/0 2px
+    no-repeat;
 
   &:hover {
     color: #{$baseColor};
@@ -47,8 +49,7 @@
   color: v.$baseColor;
   text-align: center;
   margin-bottom: 15px;
-  
-  
+
   @include mq() {
     font-size: 26px;
     margin-bottom: 30px;

@@ -1,4 +1,4 @@
-@use 'mixin' as g;
+@use "mixin" as g;
 
 .spOnly {
   display: block;
@@ -44,9 +44,9 @@
   margin-top: 60px !important;
 }
 
-.mb50-90  {
+.mb50-90 {
   margin-bottom: 50px !important;
-  @include g.mq(){
+  @include g.mq() {
     margin-bottom: 90px !important;
   }
 }

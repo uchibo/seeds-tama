@@ -34,19 +34,18 @@
 // 注釈
 .bl_note {
   margin: 30px auto;
-  
+
   li {
-    font-size: .75rem;
+    font-size: 0.75rem;
     text-indent: -1em;
     padding-left: 1em;
     &::before {
       content: none;
     }
     @include m.mq() {
-      font-size: .875rem;
+      font-size: 0.875rem;
     }
   }
-
 }
 
 // SNSボタン
