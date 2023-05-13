@@ -77,6 +77,13 @@ ol {
 }
 
 article {
+  section
+   {
+    a:not(.bl_newsList a, .bl_sns a) {
+      @include g.link-effect(g.$baseColor);
+    }
+  }
+
   ul {
     li {
       list-style-type: none;

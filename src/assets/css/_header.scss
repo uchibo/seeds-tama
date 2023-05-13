@@ -44,8 +44,9 @@
   display: none;
 
   @include g.mq(lg) {
+    transition: all .3s;
     display: flex;
-    gap: 50px;
+    gap: 20px;
     margin: 0;
 
     li {
@@ -57,7 +58,17 @@
       @include g.link-effect(g.$baseColor);
     }
   }
+
+  @include g.mq(xl) {
+    gap: 50px;
+  }
 }
+
+
+
+
+
+
 
 #spNavOpen {
   display: grid;
