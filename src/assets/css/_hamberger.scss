@@ -1,0 +1,109 @@
+.navLines {
+  position: relative;
+  width: 44px;
+  height: 16px;
+  cursor: pointer;
+  margin-top: 5px;
+}
+.navLines span {
+  position: absolute;
+  left: 0;
+  width: 100%;
+  height: 2px;
+  background-color: #7BA02C;
+  border-radius: 2px;
+}
+.navLines, navLines span {
+  display: inline-block;
+  transition: all .5s;
+  box-sizing: border-box;
+}
+.navLines span:nth-of-type(1) {
+  top: 0;
+}
+.navLines span:nth-of-type(2) {
+  top: 7px;
+}
+.navLines span:nth-of-type(3) {
+  bottom: 0;
+}
+
+
+
+#spNavOpen {
+  position: relative;
+  top: 4px;
+  right: 3px;
+}
+// #spNavOpen span:nth-of-type(1) {
+//   animation: btn07-bar01 .75s forwards;
+// }
+
+// @keyframes btn07-bar01 {
+//   0% {
+//     transform: translateY(20px) rotate(45deg);
+//   }
+//   50% {
+//     transform: translateY(20px) rotate(0);
+//   }
+//   100% {
+//     transform: translateY(0) rotate(0);
+//   }
+// }
+
+// #spNavOpen span:nth-of-type(2) {
+//   transition: all .25s .25s;
+//   opacity: 1;
+// }
+
+// #spNavOpen span:nth-of-type(3) {
+//   animation: btn07-bar03 .75s forwards;
+// }
+
+// @keyframes btn07-bar03 {
+//   0% {
+//     transform: translateY(-20px) rotate(-45deg);
+//   }
+//   50% {
+//     transform: translateY(-20px) rotate(0);
+//   }
+//   100% {
+//     transform: translateY(0) rotate(0);
+//   }
+// }
+
+// #spNavOpen.active span:nth-of-type(1) {
+//   animation: active-btn07-bar01 .75s forwards;
+// }
+
+// @keyframes active-btn07-bar01 {
+//   0% {
+//     transform: translateY(0) rotate(0);
+//   }
+//   50% {
+//     transform: translateY(20px) rotate(0);
+//   }
+//   100% {
+//     transform: translateY(20px) rotate(45deg);
+//   }
+// }
+
+// #spNavOpen.active span:nth-of-type(2) {
+//   opacity: 0;
+// }
+
+// #spNavOpen.active span:nth-of-type(3) {
+//   animation: active-btn07-bar03 .75s forwards;
+// }
+
+// @keyframes active-btn07-bar03 {
+//   0% {
+//     transform: translateY(0) rotate(0);
+//   }
+//   50% {
+//     transform: translateY(-20px) rotate(0);
+//   }
+//   100% {
+//     transform: translateY(-20px) rotate(-45deg);
+//   }
+// }

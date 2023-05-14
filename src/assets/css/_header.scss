@@ -19,7 +19,7 @@
     padding: 10px 15px;
   }
 
-  @include g.mq() {
+  @include g.mq(lg) {
     &_inner {
       padding: 15px 30px;
 
@@ -33,10 +33,10 @@
 }
 
 .el_logo {
-  width: 150px;
+  width: 190px;
 
   @include g.mq() {
-    width: 183px;
+    width: 190px;
   }
 }
 
@@ -164,12 +164,14 @@
 
 #spNavClose {
   position: absolute;
-  top: 20px;
-  right: 20px;
-  width: 60px;
-  height: 60px;
+  top: 7px;
+  right: 14px;
+  width: 48px;
+  height: 44px;
   display: flex;
   align-items: center;
+  font-size: 16px;
+  letter-spacing: -1px;
 
   &:hover {
     cursor: pointer;
