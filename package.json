@@ -13,7 +13,7 @@
     "start": "webpack-dev-server",
     "format": "prettier --write src",
     "format-dist-html": "prettier --write dist/**/*.html",
-    "webpack": "webpack --mode development"
+    "webpack": "webpack --mode development --watch"
   },
   "keywords": [],
   "author": "",
