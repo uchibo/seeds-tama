@@ -28,13 +28,19 @@ const scroll = new SmoothScroll('a[href*="#"]', {
 //   }
 // };
 
+// トップページのみ
+// footer を途中で表示する
+window.addEventListener('scroll', () => {
+  const footer = document.querySelector('.bl_footer_top');
+  const scrollHeight = window.innerHeight;
 
-  if (posTop > 300) {
-    backTopBtn.classList.add("active");
+  if (window.pageYOffset >= scrollHeight) {
+    footer.classList.add('active');
   } else {
-    backTopBtn.classList.remove("active");
+    footer.classList.remove('active');
   }
-};
+});
+
 
 //
 // スマホナビ

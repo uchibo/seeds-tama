@@ -1,5 +1,15 @@
 @use "global" as g;
 
+.home .bl_footer_top {
+  transition: opacity .6s;
+  opacity: 0;
+  pointer-events: none;
+  
+  &.active {
+    opacity: 1;
+    pointer-events: all;
+  }
+}
 .ly_footer {
   width: 100%;
   position: fixed;
@@ -56,7 +66,7 @@
         }
 
         @include g.mq(lg) {
-          grid-template-columns: repeat(3, 33%);
+          grid-template-columns: 20% 60% 20%;
 
           .leftNav {
             display: block;
