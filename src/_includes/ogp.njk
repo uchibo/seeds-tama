@@ -1,0 +1,8 @@
+<meta property="og:title" content="{% if className == 'home' %}{{ meta.siteName }}{% else %}{{ title }} | {{ meta.companyName }}{% endif %}" />
+<meta property="og:site_name" content="{{ meta.companyName }}" />
+<meta property="og:url" content="{{ meta.siteDomein }}{% if className != 'home' %}{{ className }}/{% endif %}" />
+<meta property="og:description" content="{{ meta.siteDescription }}" />
+<meta property="og:image" content="{{ meta.siteDomein }}assets/images/ogp.jpg" />
+<meta property="og:type" content="{% if className == 'home' %}website{% else %}article{% endif %}">
+
+<link rel="apple-touch-icon" href="{{ meta.siteDomein }}assets/images/appicon.png">
