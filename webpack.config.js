@@ -10,14 +10,14 @@ module.exports = {
 
   // ファイルの出力設定
   output: {
-    path: path.resolve(__dirname, 'dist/assets/js/'),
+    path: path.resolve(__dirname, 'httpdocs/assets/js/'),
     filename: '[name].js'
   },
 
   // ローカル開発用環境を立ち上げる
   // 実行時にブラウザが自動的に localhost を開く
   devServer: {
-    static: path.join(__dirname, "./dist"),
+    static: path.join(__dirname, "./httpdocs"),
     open: true
   },
 
