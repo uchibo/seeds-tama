@@ -11,8 +11,16 @@
   {% endif %}
   {% include 'ogp.njk' %}
   <link rel="stylesheet" href="{{ path }}assets/css/screen.css">
-  <!-- Global site tag (gtag.js) - Google Analytics -->
+  <!-- Google tag (gtag.js) -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-C95G6TNC03"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    // prettier-ignore
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
 
+    gtag('config', 'G-C95G6TNC03');
+  </script>
 
 </head>
 <body id="top" class="{{className}}">
